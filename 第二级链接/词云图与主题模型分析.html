@@ -1,0 +1,115 @@
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <style type="text/css">
+  body {
+  margin: 0;
+  position: static;s
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  }
+  img.ex1 
+  {margin-top:3cm;}
+  div.chart
+  {margin-top:1cm;}
+  center.ex1
+  {margin-top:3cm;}
+  #main {
+  height: 100%;
+  }
+  </style>
+  </head>
+  <body>
+  <center>
+  <table>
+	<tr>
+		<td>
+			<center>
+				<font class="titl" size = "6" color="FFFFE0">词云图与主题模型分析</font>
+			</center>
+		</td>
+	</tr>
+	<tr>	
+		<td>
+			<img src="../images/ciyuntu1.png" width="600" height="400" />
+			<center><font size="4" color="FFFFE0">词云图与主题模型分析</font></center>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		    <center  class="ex1"><h1>  <font color="FFFFE0">主题模型分析</font></h1></center>
+			<center><p ><font size="3" color="FFFFE0">
+			我们通过主题模型，将企业评论数据分成不同类的主题，挖掘出评论数据的主要内容，<br>
+			选取几个主题来表达评论数据的内容。
+			</font></p></center>
+			<img src="../images/zt-1.png" width="700" height="450" style="background-color:FFFFE0" />
+			<center><p ><font size="3" color="FFFFE0">
+			将困惑度设置为2~25，使用LDA_VEM模型，得到困惑度与信息熵的变化趋势如上图所示，<br>
+			困惑度是先上升后下降的趋势，信息熵是处于一直上升趋势，最后综合考虑到困惑度、<br>
+			信息熵与计算成本代价，选取主题个数为8，建立主题模型。
+
+            </font></p></center>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+			<img class="ex1" src="../images/zt-2.png" width="700" height="450" style="background-color:FFFFE0"/>
+			<center><p ><font size="3" color="FFFFE0">
+			上图展示的文档主题概率分布，颜色越深，表示属于该主题的概率越高。由图中可以看出，<br>
+			颜色区分度不是很大，说明主题区分不是很明显。
+
+			</font></p></center>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+			<img class="ex1" src="../images/zt-3.png" width="700" height="500" style="background-color:FFFFFF"/>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+			<center><p  style="margin-top:0.6cm;"><font size="3" color="FFFFE0">
+			抽取每个主题阈值在0.002以上的前8个词，绘制成网络图，发现主题之间不是很明显，由主题模型的结果，<br>
+			我们大致可以归纳出以下几个主题：第一，部分用户对这类产品没有信心，认为其是骗人的；<br>
+			第二，部分用户还是抱有一定的希望。
+
+			</font></p></center>
+		</td>
+	  </tr>
+	  
+	  <tr>
+		<td>
+			<img class="ex1" src="../images/zt-5.png" width="700" height="450" style="background-color:FFFFE0"/>
+			<center><p ><font size="3" color="FFFFE0">
+			对评论数据分别建立LDA_VEM、LDA_VEM_fixed、LDA_Gibbs、CTM四种模型，设置主题数k=8，<br>
+			得到四种模型对文档分配给最有可能文档的频数分布图如上图所示，很容易看出各个<br>
+			模型的区分度不是很大，也就是说绝大多数的文档都有一个可能性非常大的主题。
+
+            </font></p></center>
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<img class="ex1" src="../images/zt-6.png" width="700" height="450" style="background-color:FFFFE0"/>
+			<center><p ><font size="3" color="FFFFE0">
+			由主题得分发现，主题之间存在交互现象，各个主题得分比较高，但是主题区分不是很明显。
+			</font></p></center>
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<img class="ex1" src="../images/zt-7.png" width="700" height="450" style="background-color:FFFFE0"/>
+			<center><p ><font size="3" color="FFFFE0">
+			各个主题的词云图，发现存在很多交互的此项，既主题之间区分不是很明显。
+			</font></p></center>
+		</td>
+	   </tr>
+	</table>
+	</center>
+  </body>
+  </html>
